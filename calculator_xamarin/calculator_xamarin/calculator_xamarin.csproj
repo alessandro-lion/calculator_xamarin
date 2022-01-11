@@ -4,7 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
   </PropertyGroup>
-
+  
+  <PropertyGroup>
+     <DisableXbfLineInfo Condition="'$(ConfigurationName)' != 'Release'">false</DisableXbfLineInfo>
+  </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
